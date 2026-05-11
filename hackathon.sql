@@ -77,7 +77,8 @@ VALUES
 (5,'G05','R01','Booked','2025-10-05');
 
 -- CÂU 3:
-UPDATE Rooms SET capacity = capacity + 2 AND price_per_night = price_per_night * 1.05 WHERE room_name = 'Phòng 401';
+UPDATE Rooms SET capacity = capacity + 2 WHERE room_name = 'Phòng 401';
+UPDATE Rooms SET price_per_night = price_per_night * 1.05 WHERE room_name = 'Phòng 401';
 -- CÂU 4:
 UPDATE Guests SET phone = '0999999999' WHERE guest_id = 'G03';
 -- CÂU 5:
@@ -138,7 +139,7 @@ HAVING total_ordered >= 2;
 -- CÂU 15:
 SELECT room_id, room_name, price_per_night
 FROM rooms
-WHERE price_per_night < (
+WHERE price_per_night < (	
 	SELECT AVG(price_per_night) AS average_price FROM rooms
 );
 
