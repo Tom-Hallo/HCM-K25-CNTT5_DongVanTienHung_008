@@ -77,8 +77,7 @@ VALUES
 (5,'G05','R01','Booked','2025-10-05');
 
 -- CÂU 3:
-UPDATE Rooms SET capacity = capacity + 2 WHERE room_name = 'Phòng 401';
-UPDATE Rooms SET price_per_night = price_per_night * 1.05 WHERE room_name = 'Phòng 401';
+UPDATE Rooms SET capacity = capacity + 2, price_per_night = price_per_night * 1.05 WHERE room_name = 'Phòng 401';
 -- CÂU 4:
 UPDATE Guests SET phone = '0999999999' WHERE guest_id = 'G03';
 -- CÂU 5:
